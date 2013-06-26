@@ -103,7 +103,11 @@ class Elasticsearch < Formula
           <key>EnvironmentVariables</key>
           <dict>
             <key>ES_JAVA_OPTS</key>
-            <string>-Xss200000</string>
+            <string>-Xss200000 -XX:PermSize=500m -XX:MaxPermSize=500m</string>
+            <key>ES_HEAP_SIZE</key>
+            <string>1g</string>
+            <key>ES_MAX_MEM</key>
+            <string>1g</string>
           </dict>
           <key>RunAtLoad</key>
           <true/>
